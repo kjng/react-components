@@ -1,11 +1,12 @@
-let GroceryList = () => (
-  <ul>
-    <GroceryListItem item={groceryItems[0]}/>
-    <GroceryListItem item={groceryItems[1]}/>
-  </ul>
-);
+let GroceryList = () => {
+  let groceryItems = [<GroceryListItem item='Bananas' key='1'/>, <GroceryListItem item='Milk' key='2'/>];
 
-let groceryItems = ['Bananas', 'Milk'];
+  return (
+    <ul>
+      {groceryItems}
+    </ul>
+  );
+};
 
 let GroceryListItem = (props) => (
   <li>{props.item}</li>
