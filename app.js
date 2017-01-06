@@ -1,16 +1,14 @@
 let GroceryList = () => (
   <ul>
-    <BananaComponent />
-    <MilkComponent />
+    <GroceryListItem item={groceryItems[0]}/>
+    <GroceryListItem item={groceryItems[1]}/>
   </ul>
 );
 
-let BananaComponent = () => (
-  <li>Bananas</li>
-);
+let groceryItems = ['Bananas', 'Milk'];
 
-let MilkComponent = () => (
-  <li>Milk</li>
+let GroceryListItem = (props) => (
+  <li>{props.item}</li>
 );
 
 ReactDOM.render(<GroceryList />, document.getElementById('app'));
